@@ -123,6 +123,27 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | CUSTOM ENV VARIABLES OF PROJECT
+    |--------------------------------------------------------------------------
+    */
+    'app_url_static' => env('APP_URL_STATIC', null),
+
+    'mail_to_song_contributed' => env('MAIL_TO_SONG_CONTRIBUTED', null),
+
+    'google_analytics_id' => env('GOOGLE_ANALYTICS_ID', null),
+
+    'recaptcha_base_url' => env('RECAPTCHA_BASE_URL', null),
+
+    'recaptcha_url_verify' => env('RECAPTCHA_URL_VERIFY', null),
+
+    'recaptcha_site_key' => env('RECAPTCHA_SITE_KEY', null),
+
+    'recaptcha_secret_key' => env('RECAPTCHA_SECRET_KEY', null),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers

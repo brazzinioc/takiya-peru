@@ -16,8 +16,7 @@ COPY ./src/ /var/www/
 RUN mv .env.test .env
 
 RUN composer install --ignore-platform-reqs --no-interaction --prefer-dist --optimize-autoloader
-RUN ./vendor/phpunit/phpunit/phpunit tests/Unit/ --testdox --verbose
-RUN ./vendor/phpunit/phpunit/phpunit tests/Feature/Http/Controllers/ --testdox --verbose
+RUN ./vendor/phpunit/phpunit/phpunit tests/Unit/ --testdox --verbose && ./vendor/phpunit/phpunit/phpunit tests/Feature/Http/Controllers/ --testdox --verbose
 RUN rm -f .env && rm -rf vendor && rm -rf tests && rm -f .phpunit.result.cache && rm -f phpunit.xml
 
 

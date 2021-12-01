@@ -3,7 +3,7 @@
 <?php $__env->startSection('meta-tags'); ?>
 
 <?php
-    $url = env('APP_URL') . "/contribuir";
+    $url = config('app.url') . "/contribuir";
     $description = "Proyecto cuyo objetivo es subtitular en Quechua y traducir al Español canciones interpretados en el idioma Quechua.";
 ?>
 
@@ -145,11 +145,11 @@
                             rows="5"><?php echo e(old('observation')); ?></textarea>
             </div>
 
-            <input type="hidden" id="recaptcha-site-key" value="<?php echo e(env('GOOGLE_RECAPTCHA_SITE_KEY')); ?>">
+            <input type="hidden" id="recaptcha-site-key" value="<?php echo e(config('app.recaptcha_site_key')); ?>">
             <input type="hidden" name="recaptcha_token" id="recaptcha-token" value="">
             <small class="mb-4 block"><span class="text-red-500">*</span> Campos obligatorios</small>
 
-            <input type="button" value="Enviar" id="send-contribution" onclick="sendContribution()" class="py-2 px-4 bg-purple-600 rounded text-white hover:bg-purple-700 w-full cursor-pointer">
+            <input type="button" value="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                iar" id="send-contribution" onclick="sendContribution()" class="py-2 px-4 bg-purple-600 rounded text-white hover:bg-purple-700 w-full cursor-pointer">
         </form>
     </div>
 
@@ -157,7 +157,7 @@
 
 
 <?php $__env->startSection('extra-js'); ?>
-    <script src="https://www.google.com/recaptcha/api.js?render=<?php echo e(env('GOOGLE_RECAPTCHA_SITE_KEY')); ?>"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=<?php echo e(config('app.recaptcha_site_key')); ?>"></script>
     <script>
         function sendContribution() {
             grecaptcha.ready(function() {

@@ -35,7 +35,7 @@
     <?php if( ! is_null($song->image) ): ?>
         <div class="py-5">
             <small class="text-red-500 block mb-4">Imagen actual</small>
-            <img width="50%" height="50%" src="<?php echo e(env('APP_URL_STATIC')); ?>/<?php echo e($song->get_image); ?>" alt="<?php echo e($song->title); ?>">
+            <img width="50%" height="50%" src="<?php echo e(config('app.app_url_static')); ?>/<?php echo e($song->get_image); ?>" alt="<?php echo e($song->title); ?>">
         </div>
     <?php endif; ?>
 </div>

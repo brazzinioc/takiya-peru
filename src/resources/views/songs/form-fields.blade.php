@@ -35,7 +35,7 @@
     @if( ! is_null($song->image) )
         <div class="py-5">
             <small class="text-red-500 block mb-4">Imagen actual</small>
-            <img width="50%" height="50%" src="{{env('APP_URL_STATIC')}}/{{$song->get_image}}" alt="{{$song->title}}">
+            <img width="50%" height="50%" src="{{config('app.app_url_static')}}/{{$song->get_image}}" alt="{{$song->title}}">
         </div>
     @endif
 </div>

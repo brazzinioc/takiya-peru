@@ -52,7 +52,7 @@
                                     @endisset
 
                                     @if(! is_null($song->get_image) )
-                                        <a class=" block my-2 text-xs lg:text-base text-blue-700 underline" href="{{env('APP_URL_STATIC')}}/{{$song->get_image}}" alt="{{$song->title}}" target="_blank" title="Ver imagen">Ver imágen</a>
+                                        <a class=" block my-2 text-xs lg:text-base text-blue-700 underline" href="{{config('app.app_url_static')}}/{{$song->get_image}}" alt="{{$song->title}}" target="_blank" title="Ver imagen">Ver imágen</a>
                                     @endif
                                 </td>
                                 <td class="p-2 border border-gray-300">

@@ -4,7 +4,7 @@
 <?php $__env->startSection('meta-tags'); ?>
 
 <?php
-    $url = env('APP_URL');
+    $url = config('app.url');
     $description = "Proyecto cuyo objetivo es subtitular en Quechua y traducir al Español canciones interpretados en el idioma Quechua.";
 ?>
 
@@ -57,7 +57,6 @@
 
 <?php $__env->startSection('content'); ?>
 
-
     <div class="container px-4 md:px-0 py-20">
         <div class="flex justify-center items-center">
             <div class="text-center md:text-left">
@@ -76,7 +75,7 @@
     </div>
 
     <div class="container px-4 md:px-0 h-screen py-20">
-        <main id="latest-songs">
+        <main id="latest-songs" class="">
 
             <h2 class="uppercase font-bold mb-10 text-center md:text-left">Últimas canciones subtituladas</h2>
 
@@ -109,7 +108,7 @@
                         <?php endif; ?>
                 </div>
             <?php else: ?>
-                <div class="text-center text-red-500 text-sm" role="alert">
+                <div class="text-center text-indigo-700 text-sm md:text-left bg-gray-200 p-2" role="alert">
                     Aún no hay canciones publicadas.
                 </div>
             <?php endif; ?>
