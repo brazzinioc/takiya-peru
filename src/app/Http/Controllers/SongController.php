@@ -185,7 +185,7 @@ class SongController extends Controller
         ];
 
         try {
-            Mail::to( env('MAIL_TO_SONG_CONTRIBUTED') )->send( new SongContributedMail( $song ));
+            Mail::to( config('app.mail_to_song_contributed') )->send( new SongContributedMail( $song ));
         } catch(Exception $e){
             Log::error($e->getMessage());
         }
