@@ -55,11 +55,11 @@
 
     <div class="song-image-cover flex px-4 lg:px-8 py-10" style="background-image: url('<?php echo e($urlImage); ?>')">
         <div class="bg-white text-black p-5 place-self-end w-full lg:w-auto border shadow">
-            <h1 class="font-medium text-purple-700 mb-1"><?php echo e(strtoupper($song->title)); ?></h1>
+            <h1 class="font-medium text-purple-700 text-2xl mb-1"><?php echo e(strtoupper($song->title)); ?></h1>
             <p class="text-xs lg:text-base">Género musical: <span class="font-semibold"> <?php echo e($song->genre->name); ?>  </p>
             <p class="text-xs lg:text-base">Autor: <span class="font-semibold"> <?php echo e($song->author->name_lastname); ?></p>
             <p class="text-xs lg:text-base">Letras: <span class="font-semibold"> <?php echo e($song->writer->name); ?> </span> </p>
-            <p class="text-xs lg:text-base font-light">Actualización: <span class=""> <?php echo e($song->updated_at->diffForHumans()); ?> </span> </p>
+            <p class="text-xs lg:text-base font-light"> <small> Actualización: <span class=""> <?php echo e($song->updated_at->diffForHumans()); ?> </span> </small></p>
         </div>
     </div>
 
