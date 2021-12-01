@@ -1,0 +1,16 @@
+.dockerignore
+Dockerfile
+Dockerfile.prod.app
+Dockerfile.prod.webserver
+docker-compose.yml
+.editorconfig
+.git
+.gitattributes
+.gitignore
+.env.example
+README.md
+.styleci.yml
+./vendor
+./node_modules
+./storage/log/laravel.log
+./lambdas/*

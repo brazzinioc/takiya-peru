@@ -1,0 +1,58 @@
+version: "3"
+services:
+
+  # PHP Service
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: takiya-app
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./src/:/var/www
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - takiya-net
+
+
+  # NGINX Service
+  webserver:
+    image: nginx:1
+    container_name: takiya-webserver
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    working_dir: /var/www/
+    volumes:
+      - ./src/public/:/var/www/public/
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+      - takiya-net
+
+
+  # MySQL Service
+  db:
+    image: mysql:8
+    container_name: takiya-db
+    restart: unless-stopped
+    environment:
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE:  ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ALLOW_EMPTY_PASSWORD:
+      MYSQL_RANDOM_ROOT_PASSWORD:
+    volumes:
+      - db-takiya:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - takiya-net
+
+networks:
+  takiya-net:
+    driver: bridge
+
+volumes:
+  db-takiya:

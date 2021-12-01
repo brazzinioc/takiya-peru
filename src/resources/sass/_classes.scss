@@ -1,0 +1,21 @@
+
+.play-icon {
+    color: $muted;
+    font-size: 3.5rem;
+}
+
+.song-card {
+
+    &:hover {
+
+        .play-icon,
+        .song-title {
+            color: $indigo!important;
+        }
+    }
+}
+
+
+.active {
+    background-color: rgb(45, 130, 235);
+}
