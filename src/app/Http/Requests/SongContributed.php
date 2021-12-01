@@ -14,7 +14,7 @@ class SongContributed extends FormRequest
      */
     public function authorize()
     {
-        if(! env('APP_DEBUG') ){ //validación sólo en Producción
+        if(! config('app.debug') ){ //validación sólo en Producción
             //Valida Google Recaptcha. Si no es válido, setea a NULL el campo recaptcha_token
             if(! GoogleApi::validateGoogleRecaptcha( $this->request->get('recaptcha_token') )){
                 $this->request->set('recaptcha_token', null);

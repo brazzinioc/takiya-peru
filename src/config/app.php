@@ -132,7 +132,7 @@ return [
     */
     'app_url_static' => env('APP_URL_STATIC', null),
 
-    'mail_to_song_contributed' => env('MAIL_TO_SONG_CONTRIBUTED', null),
+    'mail_to_song_contributed' => env('MAIL_TO_SONG_CONTRIBUTED', "contribute@takiya.com"),
 
     'google_analytics_id' => env('GOOGLE_ANALYTICS_ID', null),
 
