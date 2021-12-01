@@ -51,7 +51,7 @@
                                     <?php endif; ?>
 
                                     <?php if(! is_null($song->get_image) ): ?>
-                                        <a class=" block my-2 text-xs lg:text-base text-blue-700 underline" href="<?php echo e(env('APP_URL_STATIC')); ?>/<?php echo e($song->get_image); ?>" alt="<?php echo e($song->title); ?>" target="_blank" title="Ver imagen">Ver imágen</a>
+                                        <a class=" block my-2 text-xs lg:text-base text-blue-700 underline" href="<?php echo e(config('app.app_url_static')); ?>/<?php echo e($song->get_image); ?>" alt="<?php echo e($song->title); ?>" target="_blank" title="Ver imagen">Ver imágen</a>
                                     <?php endif; ?>
                                 </td>
                                 <td class="p-2 border border-gray-300">

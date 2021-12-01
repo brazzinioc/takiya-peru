@@ -4,8 +4,8 @@
 
 @section('meta-tags')
 @php
-    $url = env('APP_URL') . "/songs/{$song->slug}";
-    $urlImage = env('APP_URL_STATIC') . "/$song->get_image";
+    $url = config('app.url') . "/songs/{$song->slug}";
+    $urlImage = config('app.app_url_static') . "/$song->get_image";
     $description = "{$song->title}, canción en Quechua interpretada por {$song->author->name_lastname}";
 @endphp
 

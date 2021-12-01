@@ -12,7 +12,7 @@
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <?php
-        $googleAnalytics = env('GOOGLE_ANALYTICS');
+        $googleAnalytics = config('app.google_analytics_id');
 
         echo "<script async src='https://www.googletagmanager.com/gtag/js?id={{$googleAnalytics}}'></script>";
         echo "<script>

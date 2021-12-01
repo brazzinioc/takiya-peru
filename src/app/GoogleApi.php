@@ -17,14 +17,14 @@ class GoogleApi extends Model
             try {
 
                 $client = new Client([
-                    'base_uri' => env('RECAPTCHA_BASE_URL'),
+                    'base_uri' => config('app.recaptcha_base_url'), //env('RECAPTCHA_BASE_URL'),
                     'timeout'  => 2.0,
                 ]);
 
                 //Envía token al API de Google - Recaptcha v3
-                $apiResponse = $client->request('POST', env('RECAPTCHA_URL_VERIFY'), [
+                $apiResponse = $client->request('POST', config('app.recaptcha_url_verify'), /*env('RECAPTCHA_URL_VERIFY')*/ [
                     'form_params' => [
-                        'secret' => env('GOOGLE_RECAPTCHA_SECRET_KEY'),
+                        'secret' => config('app.recaptcha_secret_key'), /*env('GOOGLE_RECAPTCHA_SECRET_KEY'),*/
                         'response' => $recaptchaToken
                     ]
                 ]);
