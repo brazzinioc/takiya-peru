@@ -48,6 +48,7 @@
                         <?php echo e(config('app.name', '')); ?>
 
                     </a>
+                    <span class="bg-green-300 px-1 py-0 rounded text-xs font-normal">Beta</span>
                 </div>
 
                 <div class="" id="navbarSupportedContent">

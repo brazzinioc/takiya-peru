@@ -15,5 +15,5 @@ RUN npm install npm -g && npm install && npm run production
 FROM nginx:1 AS stage1
 COPY ./nginx/prod/conf.d/app.prod.conf /etc/nginx/conf.d/default.conf
 WORKDIR /var/www
-COPY --from=stage1 /var/www/public /var/www/public
+COPY --from=stage0 /var/www/public /var/www/public
 EXPOSE 80
