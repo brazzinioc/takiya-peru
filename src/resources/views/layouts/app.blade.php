@@ -47,6 +47,7 @@
                     <a class="font-semibold uppercase tracking-widest text-lg" href="{{ url('/') }}">
                         {{ config('app.name', '') }}
                     </a>
+                    <span class="bg-green-300 px-1 py-0 rounded text-xs font-normal">Beta</span>
                 </div>
 
                 <div class="" id="navbarSupportedContent">
